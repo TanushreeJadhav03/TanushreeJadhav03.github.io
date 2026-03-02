@@ -3,10 +3,54 @@
 <head>
 <title>Skills</title>
 <style>
-body {background:#0f172a;color:white;font-family:Arial;text-align:center;padding:50px;}
-nav a {color:#38bdf8;margin:15px;text-decoration:none;font-weight:bold;}
-ul {list-style:none;padding:0;}
-li {background:#1e293b;margin:10px;padding:10px;border-radius:20px;}
+body {
+    background:#0f172a;
+    color:white;
+    font-family:Arial;
+    margin:0;
+}
+
+nav {
+    text-align:center;
+    padding:20px;
+}
+
+nav a {
+    color:#38bdf8;
+    margin:15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover {
+    color:white;
+}
+
+h1 {
+    text-align:center;
+}
+
+.skills-container {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:20px;
+    padding:40px;
+}
+
+.skill-card {
+    background:#1e293b;
+    padding:30px;
+    text-align:center;
+    border-radius:10px;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.skill-card:hover {
+    background:#38bdf8;
+    color:black;
+    transform:scale(1.05);
+}
 </style>
 </head>
 <body>
@@ -20,15 +64,16 @@ li {background:#1e293b;margin:10px;padding:10px;border-radius:20px;}
 
 <h1>My Skills</h1>
 
-<ul>
-<li>Full Stack Java</li>
-<li>JDBC</li>
-<li>MySQL</li>
-<li>HTML</li>
-<li>AWS</li>
-<li>DevOps</li>
-<li>Git & GitHub</li>
-</ul>
+<div class="skills-container">
+    <div class="skill-card">Java</div>
+    <div class="skill-card">JDBC</div>
+    <div class="skill-card">MySQL</div>
+    <div class="skill-card">HTML & CSS</div>
+    <div class="skill-card">Full Stack Java</div>
+    <div class="skill-card">AWS</div>
+    <div class="skill-card">DevOps</div>
+    <div class="skill-card">Git & GitHub</div>
+</div>
 
 </body>
 </html>
