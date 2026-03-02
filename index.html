@@ -3,23 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tanushree Jadhav | Java Developer</title>
+<title>Tanushree Jadhav | Portfolio</title>
 
 <style>
-body {
+* {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
     background: #0f172a;
     color: white;
+    scroll-behavior: smooth;
 }
 
 header {
+    background: #1e293b;
+    padding: 20px;
     text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #1e293b, #0f172a);
 }
 
-header img {
+header h1 {
+    font-size: 28px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #38bdf8;
+}
+
+.profile-img {
+    display: block;
+    margin: auto;
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -27,69 +62,80 @@ header img {
     object-fit: cover;
 }
 
-h1 {
-    margin: 15px 0 5px;
-    font-size: 32px;
+.about p {
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.6;
 }
 
-h2 {
-    color: #38bdf8;
-    border-bottom: 2px solid #334155;
-    padding-bottom: 5px;
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
 }
 
-section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
+.skills li {
+    background: #1e293b;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.skills li:hover {
+    background: #38bdf8;
+    color: black;
 }
 
 .card {
     background: #1e293b;
-    padding: 20px;
+    padding: 25px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: 0.3s;
 }
 
-ul {
-    list-style-type: square;
+.card:hover {
+    transform: translateY(-5px);
 }
 
-a {
-    color: #38bdf8;
-    text-decoration: none;
+.card ul {
+    margin-top: 10px;
+    padding-left: 20px;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-.button {
+.btn {
     display: inline-block;
+    margin-top: 15px;
     padding: 10px 20px;
     background: #38bdf8;
     color: black;
+    text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    margin-top: 10px;
 }
 
-.button:hover {
+.btn:hover {
     background: white;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact a {
+    display: block;
+    margin: 10px 0;
+    color: #38bdf8;
+    text-decoration: none;
 }
 
 footer {
     text-align: center;
     padding: 20px;
     background: #1e293b;
-    margin-top: 30px;
-}
-
-@media (max-width: 600px) {
-    header img {
-        width: 120px;
-        height: 120px;
-    }
+    margin-top: 40px;
 }
 </style>
 </head>
@@ -97,71 +143,89 @@ footer {
 <body>
 
 <header>
-    <img src="profile.jpg" alt="Profile Picture">
     <h1>Tanushree Jadhav</h1>
-    <p>Full Stack Java Developer | AWS & DevOps Enthusiast</p>
-    <a href="resume.pdf" target="_blank" class="button">View Resume</a>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<section>
-<h2>About Me</h2>
-<div class="card">
-<p>
-I am a passionate and dedicated Full Stack Java Developer with strong expertise in Java, MySQL, HTML, and backend development.
-I enjoy building scalable, efficient, and user-friendly applications with clean UI and structured database integration.
+<section id="about" class="about">
+    <h2>About Me</h2>
 
-I have hands-on experience developing desktop-based management systems using Java Swing and JDBC.
-Currently, I am seeking an internship opportunity where I can apply my technical skills,
-contribute to real-world projects, and grow as a professional software developer.
-</p>
-</div>
+    <!-- Replace profile.jpg with your image file name -->
+    <img src="profile.jpg" alt="Tanushree Jadhav" class="profile-img">
+
+    <p>
+    I am a passionate Full Stack Java Developer with strong knowledge of 
+    Java, MySQL, HTML, AWS and DevOps. I enjoy building scalable 
+    applications and designing clean, user-friendly interfaces.
+    </p>
+
+    <p>
+    I am highly motivated, quick learner, and always eager to 
+    improve my technical and problem-solving skills. 
+    My goal is to contribute to innovative software solutions 
+    and grow as a professional developer.
+    </p>
+
+    <a href="resume.pdf" class="btn" target="_blank">Download Resume</a>
 </section>
 
-<section>
-<h2>Skills</h2>
-<div class="card">
-<ul>
-<li>Full Stack Java Development</li>
-<li>Java Swing & JDBC</li>
-<li>MySQL Database Management</li>
-<li>HTML & CSS</li>
-<li>AWS Cloud Fundamentals</li>
-<li>DevOps Basics</li>
-<li>Git & GitHub</li>
-</ul>
-</div>
+<section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>Java</li>
+        <li>JDBC</li>
+        <li>MySQL</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Full Stack Java</li>
+        <li>AWS</li>
+        <li>DevOps</li>
+        <li>Git & GitHub</li>
+    </ul>
 </section>
 
-<section>
-<h2>Project</h2>
-<div class="card">
-<h3>Hospital Management System – Java Swing & MySQL</h3>
-<p>
-Developed a desktop-based hospital management application to efficiently manage patients, doctors, appointments, and billing processes.
-</p>
-<ul>
-<li>Implemented CRUD operations using JDBC with MySQL database integration</li>
-<li>Designed a modern, scrollable, color-coded dashboard interface</li>
-<li>Applied dark-themed UI with styled headers and highlighted rows</li>
-<li>Integrated appointment scheduling and billing module with input validation</li>
-<li>Ensured structured database connectivity and optimized queries</li>
-</ul>
-</div>
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>Hospital Management System – Java Swing & MySQL</h3>
+
+        <p>
+        Developed a desktop-based Hospital Management System 
+        to efficiently manage patients, doctors, appointments, and billing.
+        </p>
+
+        <ul>
+            <li>Implemented full CRUD operations using JDBC & MySQL.</li>
+            <li>Designed modern scrollable dashboard with interactive UI.</li>
+            <li>Applied dark theme tables with highlighted rows.</li>
+            <li>Integrated appointment scheduling & billing validation.</li>
+            <li>Optimized database queries for better performance.</li>
+        </ul>
+
+        <a href="https://github.com/TanushreeJadhav03" target="_blank" class="btn">View on GitHub</a>
+    </div>
+
 </section>
 
-<section>
-<h2>Contact</h2>
-<div class="card">
-<p><strong>Email:</strong> <a href="mailto:tanushreejadhav2703@gmail.com">tanushreejadhav2703@gmail.com</a></p>
-<p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tanushree-jadhav" target="_blank">linkedin.com/in/tanushree-jadhav</a></p>
-<p><strong>GitHub:</strong> <a href="https://github.com/TanushreeJadhav03" target="_blank">github.com/TanushreeJadhav03</a></p>
-</div>
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+
+    <a href="tel:+918421953261">📞 8421953261</a>
+    <a href="mailto:tanushreejadhav2703@gmail.com">📧 tanushreejadhav2703@gmail.com</a>
+    <a href="https://www.linkedin.com/in/tanushree-jadhav" target="_blank">LinkedIn</a>
+    <a href="https://github.com/TanushreeJadhav03" target="_blank">GitHub</a>
+
 </section>
 
 <footer>
-© 2026 Tanushree Jadhav | All Rights Reserved
+    © 2026 Tanushree Jadhav | All Rights Reserved
 </footer>
 
 </body>
 </html>
-
