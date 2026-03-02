@@ -3,10 +3,58 @@
 <head>
 <title>Projects</title>
 <style>
-body {background:#0f172a;color:white;font-family:Arial;padding:50px;}
-nav a {color:#38bdf8;margin:15px;text-decoration:none;font-weight:bold;}
-.card {background:#1e293b;padding:20px;border-radius:10px;margin-top:20px;}
-.btn {background:#38bdf8;color:black;padding:10px 20px;text-decoration:none;border-radius:5px;}
+body {
+    background:#0f172a;
+    color:white;
+    font-family:Arial;
+    margin:0;
+}
+
+nav {
+    text-align:center;
+    padding:20px;
+}
+
+nav a {
+    color:#38bdf8;
+    margin:15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover {
+    color:white;
+}
+
+.container {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:70vh;
+}
+
+.card {
+    background:#1e293b;
+    padding:40px;
+    border-radius:15px;
+    width:500px;
+    text-align:left;
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:translateY(-5px);
+}
+
+.btn {
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#38bdf8;
+    color:black;
+    text-decoration:none;
+    border-radius:5px;
+}
 </style>
 </head>
 <body>
@@ -18,10 +66,10 @@ nav a {color:#38bdf8;margin:15px;text-decoration:none;font-weight:bold;}
 <a href="contact.html">Contact</a>
 </nav>
 
-<h1>Projects</h1>
-
+<div class="container">
 <div class="card">
-<h3>Hospital Management System – Java Swing & MySQL</h3>
+<h2>Hospital Management System – Java Swing & MySQL</h2>
+
 <ul>
 <li>CRUD operations using JDBC & MySQL</li>
 <li>Modern dashboard UI</li>
@@ -30,6 +78,8 @@ nav a {color:#38bdf8;margin:15px;text-decoration:none;font-weight:bold;}
 </ul>
 
 <a href="https://github.com/TanushreeJadhav03" target="_blank" class="btn">View GitHub</a>
+
+</div>
 </div>
 
 </body>
