@@ -1,30 +1,66 @@
 /* ============================= */
-/* GLOBAL SETTINGS */
+/* GLOBAL RESET */
 /* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html {
     font-size: 16px;
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Poppins', Arial, sans-serif;
     color: #ffffff;
     scroll-behavior: smooth;
     overflow-x: hidden;
 
-    /* Animated Red Gradient Background */
+    /* Animated Gradient Background */
     background: linear-gradient(-45deg, #0f172a, #1e1b2e, #3f1d1d, #7f1d1d);
     background-size: 400% 400%;
     animation: gradientMove 12s ease infinite;
 }
 
-/* Background Animation */
+/* Gradient Animation */
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+/* ============================= */
+/* FLOATING GLOW BACKGROUND */
+/* ============================= */
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(248,113,113,0.35), transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    animation: float 8s ease-in-out infinite;
+}
+
+body::before {
+    top: -100px;
+    left: -100px;
+}
+
+body::after {
+    bottom: -100px;
+    right: -100px;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0px); }
+    50% { transform: translateY(30px); }
 }
 
 /* ============================= */
@@ -47,23 +83,7 @@ nav a {
     margin: 0 1.2rem;
     font-weight: 600;
     text-decoration: none;
-    position: relative;
     transition: 0.3s;
-}
-
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #f87171;
-    transition: width 0.3s;
-}
-
-nav a:hover::after {
-    width: 100%;
 }
 
 nav a:hover {
@@ -71,7 +91,27 @@ nav a:hover {
 }
 
 /* ============================= */
-/* ABOUT CONTAINER */
+/* HEADINGS & TEXT */
+/* ============================= */
+
+h1 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin: 2rem 0 1.5rem;
+    background: linear-gradient(90deg, #f87171, #ef4444, #dc2626);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    opacity: 0.95;
+}
+
+/* ============================= */
+/* ABOUT */
 /* ============================= */
 
 .about-container {
@@ -79,36 +119,6 @@ nav a:hover {
     margin: auto;
     padding: 3rem 1.5rem;
     text-align: center;
-    animation: fadeIn 1.2s ease forwards;
-}
-
-/* Fade Animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* ============================= */
-/* HEADINGS */
-/* ============================= */
-
-h1 {
-    font-size: 2.6rem;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(90deg, #f87171, #ef4444, #dc2626);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* ============================= */
-/* PARAGRAPHS */
-/* ============================= */
-
-p {
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 1.2rem;
-    opacity: 0.95;
 }
 
 /* ============================= */
@@ -137,20 +147,107 @@ p {
 }
 
 /* ============================= */
+/* SKILLS */
+/* ============================= */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.skill-card {
+    background: rgba(0,0,0,0.6);
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    background: linear-gradient(135deg, #f87171, #ef4444);
+    color: black;
+    transform: translateY(-8px);
+}
+
+/* ============================= */
+/* PROJECTS */
+/* ============================= */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.project-card {
+    background: rgba(0,0,0,0.6);
+    padding: 30px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    background: linear-gradient(135deg, #f87171, #ef4444);
+    color: black;
+    transform: translateY(-8px);
+}
+
+/* ============================= */
+/* CONTACT */
+/* ============================= */
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.contact-container {
+    text-align: center;
+}
+
+.contact-link {
+    display: block;
+    margin: 15px auto;
+    padding: 15px 25px;
+    width: 280px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #f87171;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    background: linear-gradient(135deg, #f87171, #ef4444);
+    color: black;
+    transform: translateY(-5px);
+}
+
+/* ============================= */
 /* MOBILE RESPONSIVE */
 /* ============================= */
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     h1 {
         font-size: 2rem;
-    }
-
-    p {
-        font-size: 1rem;
     }
 
     nav a {
         margin: 0 0.6rem;
         font-size: 0.9rem;
+    }
+
+    .contact-link {
+        width: 90%;
     }
 }
