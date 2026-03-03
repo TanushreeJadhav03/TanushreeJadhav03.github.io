@@ -1,4 +1,8 @@
 /* ===== Global Styles ===== */
+html {
+    font-size: 16px; /* Base font size for rem units */
+}
+
 body {
     background: #0f172a;
     color: #ffffff;
@@ -17,7 +21,7 @@ a {
 nav {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 1.2rem 0;
     background: #1e293b;
     position: sticky;
     top: 0;
@@ -26,10 +30,11 @@ nav {
 
 nav a {
     color: #38bdf8;
-    margin: 0 20px;
+    margin: 0 1.2rem;
     font-weight: bold;
     position: relative;
-    padding-bottom: 5px;
+    padding-bottom: 0.2rem;
+    font-size: 1rem; /* consistent on all screens */
 }
 
 nav a::after {
@@ -54,23 +59,19 @@ nav a:hover {
 /* ===== Headings ===== */
 h1 {
     text-align: center;
-    margin-top: 30px;
-    font-size: 2.8rem;
+    margin-top: 2rem;
+    font-size: 2.5rem; /* Use rem for scaling */
     background: linear-gradient(90deg, #38bdf8, #0ea5e9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: fadeIn 1s ease forwards;
 }
 
 /* ===== Paragraphs ===== */
 p {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 50rem; /* 800px approx */
+    margin: 1.2rem auto;
     line-height: 1.8;
-    font-size: 16px;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 1s ease forwards;
+    font-size: 1rem;
 }
 
 /* ===== About Page ===== */
@@ -79,9 +80,9 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    max-width: 800px;
+    max-width: 50rem;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 3rem 1rem;
     text-align: center;
 }
 
@@ -90,77 +91,73 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    padding: 30px 40px;
+    margin-top: 3rem;
+    padding: 2rem 3rem;
     background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-    border-radius: 15px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.3);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .resume-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 1.2rem 2.5rem rgba(0,0,0,0.4);
 }
 
 .resume-box .btn {
     background: white;
     color: #0f172a;
-    padding: 12px 30px;
-    font-size: 18px;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
     font-weight: bold;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(56,189,248,0.5);
-    transition: all 0.3s ease;
+    border-radius: 0.6rem;
+    box-shadow: 0 0.3rem 1rem rgba(56,189,248,0.5);
 }
 
 .resume-box .btn:hover {
     background: #0f172a;
     color: #38bdf8;
-    box-shadow: 0 8px 20px rgba(56,189,248,0.6);
+    box-shadow: 0 0.5rem 1.5rem rgba(56,189,248,0.6);
 }
 
 /* ===== Skills & Projects ===== */
 .skills-container,
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
-    padding: 40px;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1.5rem;
+    padding: 2.5rem;
+    max-width: 75rem;
     margin: 0 auto;
 }
 
 .skill-card,
 .project-card {
     background: #1e293b;
-    padding: 25px 20px;
+    padding: 1.5rem 1rem;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 1rem;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #ffffff;
     transition: all 0.4s ease;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 0.8s forwards;
 }
 
 .skill-card:hover,
 .project-card:hover {
     background: linear-gradient(135deg, #38bdf8, #0ea5e9);
     color: #000000;
-    transform: scale(1.1) rotate(-2deg);
-    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.5);
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1.5rem rgba(56, 189, 248, 0.5);
 }
 
 /* ===== Contact Page ===== */
 .contact-wrapper {
     display: flex;
-    justify-content: center;  /* horizontal center */
-    align-items: center;      /* vertical center */
-    min-height: calc(100vh - 80px); /* viewport minus nav height */
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 5rem); /* adjust for nav height */
+    padding: 1rem;
 }
 
 .contact-container {
@@ -172,7 +169,7 @@ p {
 
 .contact-container h1 {
     font-size: 2.5rem;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
     background: linear-gradient(90deg, #38bdf8, #0ea5e9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -180,12 +177,12 @@ p {
 
 .contact-link {
     display: block;
-    margin: 15px 0;
-    padding: 15px 30px;
-    width: 250px;
-    font-size: 18px;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    width: 18rem;
+    font-size: 1rem;
     font-weight: bold;
-    border-radius: 12px;
+    border-radius: 0.8rem;
     background: #1e293b;
     color: #38bdf8;
     transition: all 0.3s ease;
@@ -195,25 +192,27 @@ p {
     background: linear-gradient(135deg, #38bdf8, #0ea5e9);
     color: #000000;
     transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(56,189,248,0.5);
+    box-shadow: 0 0.5rem 1.5rem rgba(56,189,248,0.5);
 }
 
 /* ===== Animations ===== */
 @keyframes fadeUp {
-    0% { opacity: 0; transform: translateY(30px); }
+    0% { opacity: 0; transform: translateY(2rem); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
+    0% { opacity: 0; transform: translateY(1rem); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
+/* ===== Responsive (Mobile Friendly) ===== */
+@media (max-width: 480px) {
     h1 { font-size: 2rem; }
-    .skill-card, .project-card { padding: 20px 15px; font-size: 1rem; }
-    .contact-container h1 { font-size: 2rem; margin-bottom: 30px; }
-    .contact-link { width: 200px; font-size: 16px; }
-    p { font-size: 15px; padding: 0 10px; }
+    p { font-size: 1rem; }
+    nav a { font-size: 0.95rem; margin: 0 0.8rem; }
+    .contact-container h1 { font-size: 2rem; }
+    .contact-link { width: 90%; font-size: 1rem; padding: 0.9rem 1rem; }
+    .resume-box { padding: 1.5rem 2rem; }
+    .skill-card, .project-card { padding: 1rem; font-size: 0.95rem; }
 }
