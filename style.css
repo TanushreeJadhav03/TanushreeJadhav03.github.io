@@ -62,106 +62,19 @@ h1 {
     animation: fadeIn 1s ease forwards;
 }
 
-/* ===== Paragraphs ===== */
-p {
-    max-width: 800px;
-    margin: 20px auto;
-    line-height: 1.8;
-    font-size: 16px;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 1s ease forwards;
-}
-
-/* ===== About Container ===== */
-.about-container {
+/* ===== Contact Page Centering ===== */
+body.contact-page {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 50px 20px;
-    text-align: center;
+    min-height: 100vh;
 }
 
-/* ===== Resume Box ===== */
-.resume-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    padding: 30px 40px;
-    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-    border-radius: 15px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.resume-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
-
-.resume-box .btn {
-    background: white;
-    color: #0f172a;
-    padding: 12px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(56,189,248,0.5);
-    transition: all 0.3s ease;
-}
-
-.resume-box .btn:hover {
-    background: #0f172a;
-    color: #38bdf8;
-    box-shadow: 0 8px 20px rgba(56,189,248,0.6);
-}
-
-/* ===== Skills & Projects Grid ===== */
-.skills-container,
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.skill-card,
-.project-card {
-    background: #1e293b;
-    padding: 25px 20px;
-    text-align: center;
-    border-radius: 15px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #ffffff;
-    transition: all 0.4s ease;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 0.8s forwards;
-}
-
-/* Hover Effects for Skill/Project Cards */
-.skill-card:hover,
-.project-card:hover {
-    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-    color: #000000;
-    transform: scale(1.1) rotate(-2deg);
-    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.5);
-}
-
-/* ===== Contact Page ===== */
 .contact-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 80px);
+    align-items: center;       /* horizontal centering */
+    justify-content: center;   /* vertical centering */
+    flex: 1;                   /* takes remaining space under nav */
     text-align: center;
     padding: 20px;
 }
@@ -174,6 +87,7 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
+/* Contact Links Styling */
 .contact-link {
     display: block;
     margin: 15px 0;
@@ -207,9 +121,6 @@ p {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-    h1 { font-size: 2rem; }
-    .skill-card, .project-card { padding: 20px 15px; font-size: 1rem; }
     .contact-container h1 { font-size: 2rem; margin-bottom: 30px; }
     .contact-link { width: 200px; font-size: 16px; }
-    p { font-size: 15px; padding: 0 10px; }
 }
