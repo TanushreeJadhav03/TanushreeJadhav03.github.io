@@ -1,4 +1,7 @@
-/* ===== Global Styles ===== */
+/* ============================= */
+/* GLOBAL SETTINGS */
+/* ============================= */
+
 html {
     font-size: 16px;
 }
@@ -9,8 +12,9 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     color: #ffffff;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 
-    /* 🔥 Animated Gradient Background */
+    /* Animated Red Gradient Background */
     background: linear-gradient(-45deg, #0f172a, #1e1b2e, #3f1d1d, #7f1d1d);
     background-size: 400% 400%;
     animation: gradientMove 12s ease infinite;
@@ -23,13 +27,10 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Smooth link effect */
-a {
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+/* ============================= */
+/* NAVIGATION */
+/* ============================= */
 
-/* ===== Navigation ===== */
 nav {
     display: flex;
     justify-content: center;
@@ -45,10 +46,9 @@ nav a {
     color: #f87171;
     margin: 0 1.2rem;
     font-weight: 600;
+    text-decoration: none;
     position: relative;
-    padding-bottom: 0.2rem;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
+    transition: 0.3s;
 }
 
 nav a::after {
@@ -56,7 +56,7 @@ nav a::after {
     position: absolute;
     width: 0%;
     height: 2px;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
     background-color: #f87171;
     transition: width 0.3s;
@@ -70,141 +70,87 @@ nav a:hover {
     color: #ffffff;
 }
 
-/* ===== Headings ===== */
-h1 {
+/* ============================= */
+/* ABOUT CONTAINER */
+/* ============================= */
+
+.about-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 3rem 1.5rem;
     text-align: center;
-    margin-top: 2rem;
+    animation: fadeIn 1.2s ease forwards;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================= */
+/* HEADINGS */
+/* ============================= */
+
+h1 {
     font-size: 2.6rem;
-    font-weight: 700;
+    margin-bottom: 1.5rem;
     background: linear-gradient(90deg, #f87171, #ef4444, #dc2626);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* ===== Paragraphs ===== */
+/* ============================= */
+/* PARAGRAPHS */
+/* ============================= */
+
 p {
-    max-width: 50rem;
-    margin: 1.2rem auto;
-    line-height: 1.8;
     font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
     opacity: 0.95;
 }
 
-/* ===== About Page ===== */
-.about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 50rem;
-    margin: 0 auto;
-    padding: 3rem 1rem;
-    text-align: center;
-}
+/* ============================= */
+/* RESUME BUTTON */
+/* ============================= */
 
-/* ===== Resume Box ===== */
 .resume-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3rem;
-    padding: 2rem 3rem;
-    background: linear-gradient(135deg, #f87171, #ef4444, #dc2626);
-    border-radius: 1rem;
-    box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
-    transition: all 0.4s ease;
+    margin-top: 2.5rem;
 }
 
-.resume-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 1.2rem 2.5rem rgba(248,113,113,0.4);
-}
-
-.resume-box .btn {
-    background: white;
-    color: #0f172a;
+.btn {
+    display: inline-block;
     padding: 0.8rem 2rem;
     font-size: 1rem;
     font-weight: 600;
     border-radius: 0.6rem;
-}
-
-.resume-box .btn:hover {
-    background: #0f172a;
-    color: #f87171;
-}
-
-/* ===== Skills & Projects ===== */
-.skills-container,
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-    gap: 1.5rem;
-    padding: 2.5rem;
-    max-width: 75rem;
-    margin: 0 auto;
-}
-
-.skill-card,
-.project-card {
-    background: rgba(30, 41, 59, 0.9);
-    padding: 1.5rem 1rem;
-    text-align: center;
-    border-radius: 1rem;
-    font-weight: 600;
-    font-size: 1rem;
-    color: #ffffff;
-    transition: all 0.4s ease;
-}
-
-.skill-card:hover,
-.project-card:hover {
-    background: linear-gradient(135deg, #f87171, #ef4444, #dc2626);
-    color: #000000;
-    transform: translateY(-8px);
-    box-shadow: 0 0.8rem 1.8rem rgba(248,113,113,0.4);
-}
-
-/* ===== Contact Page ===== */
-.contact-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 5rem);
-    padding: 1rem;
-}
-
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.contact-link {
-    display: block;
-    margin: 1rem 0;
-    padding: 1rem 2rem;
-    width: 18rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 0.8rem;
-    background: rgba(30, 41, 59, 0.9);
-    color: #f87171;
-    transition: all 0.3s ease;
-}
-
-.contact-link:hover {
+    text-decoration: none;
     background: linear-gradient(135deg, #f87171, #ef4444);
     color: #000000;
+    transition: 0.4s ease;
+}
+
+.btn:hover {
     transform: translateY(-5px);
     box-shadow: 0 0.8rem 1.8rem rgba(248,113,113,0.4);
 }
 
-/* ===== Responsive ===== */
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
 @media (max-width: 480px) {
-    h1 { font-size: 2rem; }
-    p { font-size: 1rem; }
-    nav a { font-size: 0.9rem; margin: 0 0.7rem; }
-    .contact-link { width: 90%; }
-    .resume-box { padding: 1.5rem 2rem; }
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    nav a {
+        margin: 0 0.6rem;
+        font-size: 0.9rem;
+    }
 }
