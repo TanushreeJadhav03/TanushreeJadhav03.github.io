@@ -92,21 +92,6 @@ p {
     box-shadow: 0 8px 20px rgba(56, 189, 248, 0.5);
 }
 
-/* ===== Profile Image ===== */
-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 4px solid #38bdf8;
-    object-fit: cover;
-    transition: transform 0.4s, box-shadow 0.4s;
-}
-
-img:hover {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.5);
-}
-
 /* ===== Skills & Projects Grid ===== */
 .skills-container,
 .projects-container {
@@ -188,6 +173,44 @@ img:hover {
     color: #000000;
     transform: scale(1.05) translateY(-3px);
     box-shadow: 0 8px 20px rgba(56, 189, 248, 0.5);
+}
+
+/* ===== Resume Box Styles ===== */
+.resume-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 30px;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resume-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.resume-box .btn {
+    background: white;
+    color: #0f172a;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(56,189,248,0.5);
+    transition: all 0.3s ease;
+}
+
+.resume-box .btn:hover {
+    background: #0f172a;
+    color: #38bdf8;
+    box-shadow: 0 8px 20px rgba(56,189,248,0.6);
 }
 
 /* ===== Animations ===== */
