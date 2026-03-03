@@ -73,6 +73,18 @@ p {
     animation: fadeUp 1s ease forwards;
 }
 
+/* ===== About Container (Centers Resume Box & Text) ===== */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* top aligned */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
 /* ===== Buttons ===== */
 .btn {
     background: #38bdf8;
@@ -90,6 +102,41 @@ p {
     color: #0f172a;
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(56, 189, 248, 0.5);
+}
+
+/* ===== Resume Box ===== */
+.resume-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 30px 40px;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.resume-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.resume-box .btn {
+    background: white;
+    color: #0f172a;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(56,189,248,0.5);
+    transition: all 0.3s ease;
+}
+
+.resume-box .btn:hover {
+    background: #0f172a;
+    color: #38bdf8;
+    box-shadow: 0 8px 20px rgba(56,189,248,0.6);
 }
 
 /* ===== Skills & Projects Grid ===== */
@@ -118,24 +165,6 @@ p {
     animation: fadeUp 0.8s forwards;
 }
 
-/* Staggered animation delays */
-.skill-card:nth-child(1),
-.project-card:nth-child(1) { animation-delay: 0.2s; }
-.skill-card:nth-child(2),
-.project-card:nth-child(2) { animation-delay: 0.4s; }
-.skill-card:nth-child(3),
-.project-card:nth-child(3) { animation-delay: 0.6s; }
-.skill-card:nth-child(4),
-.project-card:nth-child(4) { animation-delay: 0.8s; }
-.skill-card:nth-child(5),
-.project-card:nth-child(5) { animation-delay: 1s; }
-.skill-card:nth-child(6),
-.project-card:nth-child(6) { animation-delay: 1.2s; }
-.skill-card:nth-child(7),
-.project-card:nth-child(7) { animation-delay: 1.4s; }
-.skill-card:nth-child(8),
-.project-card:nth-child(8) { animation-delay: 1.6s; }
-
 /* Hover Effects for Skill/Project Cards */
 .skill-card:hover,
 .project-card:hover {
@@ -162,55 +191,11 @@ p {
     animation: fadeUp 0.8s forwards;
 }
 
-/* Staggered animation delays for contact links */
-.contact-link:nth-child(2) { animation-delay: 0.3s; }
-.contact-link:nth-child(3) { animation-delay: 0.6s; }
-.contact-link:nth-child(4) { animation-delay: 0.9s; }
-.contact-link:nth-child(5) { animation-delay: 1.2s; }
-
 .contact-link:hover {
     background: linear-gradient(135deg, #38bdf8, #0ea5e9);
     color: #000000;
     transform: scale(1.05) translateY(-3px);
     box-shadow: 0 8px 20px rgba(56, 189, 248, 0.5);
-}
-
-/* ===== Resume Box Styles ===== */
-.resume-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    padding: 30px;
-    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-    border-radius: 15px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.resume-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
-
-.resume-box .btn {
-    background: white;
-    color: #0f172a;
-    padding: 12px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(56,189,248,0.5);
-    transition: all 0.3s ease;
-}
-
-.resume-box .btn:hover {
-    background: #0f172a;
-    color: #38bdf8;
-    box-shadow: 0 8px 20px rgba(56,189,248,0.6);
 }
 
 /* ===== Animations ===== */
@@ -229,6 +214,5 @@ p {
     h1 { font-size: 2rem; }
     .skill-card, .project-card { padding: 20px 15px; font-size: 1rem; }
     .contact-link { width: 200px; font-size: 16px; }
-    img { width: 150px; height: 150px; }
     p { font-size: 15px; padding: 0 10px; }
 }
