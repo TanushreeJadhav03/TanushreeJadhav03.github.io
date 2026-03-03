@@ -1,10 +1,10 @@
 /* ===== Global Styles ===== */
 html {
-    font-size: 16px; /* Base font size for rem units */
+    font-size: 16px;
 }
 
 body {
-    background: #0f172a;
+    background: linear-gradient(135deg, #0f172a, #111827);
     color: #ffffff;
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
@@ -12,6 +12,7 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Smooth link effect */
 a {
     text-decoration: none;
     transition: all 0.3s ease;
@@ -29,12 +30,13 @@ nav {
 }
 
 nav a {
-    color: #38bdf8;
+    color: #f87171;
     margin: 0 1.2rem;
-    font-weight: bold;
+    font-weight: 600;
     position: relative;
     padding-bottom: 0.2rem;
-    font-size: 1rem; /* consistent on all screens */
+    font-size: 1rem;
+    letter-spacing: 0.5px;
 }
 
 nav a::after {
@@ -44,7 +46,7 @@ nav a::after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: #f87171;
     transition: width 0.3s;
 }
 
@@ -60,18 +62,20 @@ nav a:hover {
 h1 {
     text-align: center;
     margin-top: 2rem;
-    font-size: 2.5rem; /* Use rem for scaling */
-    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+    font-size: 2.6rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #f87171, #ef4444, #dc2626);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* ===== Paragraphs ===== */
 p {
-    max-width: 50rem; /* 800px approx */
+    max-width: 50rem;
     margin: 1.2rem auto;
     line-height: 1.8;
     font-size: 1rem;
+    opacity: 0.95;
 }
 
 /* ===== About Page ===== */
@@ -79,7 +83,6 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     max-width: 50rem;
     margin: 0 auto;
     padding: 3rem 1rem;
@@ -93,15 +96,15 @@ p {
     align-items: center;
     margin-top: 3rem;
     padding: 2rem 3rem;
-    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    background: linear-gradient(135deg, #f87171, #ef4444, #dc2626);
     border-radius: 1rem;
-    box-shadow: 0 1rem 2rem rgba(0,0,0,0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
+    transition: all 0.4s ease;
 }
 
 .resume-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 1.2rem 2.5rem rgba(0,0,0,0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 1.2rem 2.5rem rgba(248,113,113,0.4);
 }
 
 .resume-box .btn {
@@ -109,15 +112,13 @@ p {
     color: #0f172a;
     padding: 0.8rem 2rem;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 600;
     border-radius: 0.6rem;
-    box-shadow: 0 0.3rem 1rem rgba(56,189,248,0.5);
 }
 
 .resume-box .btn:hover {
     background: #0f172a;
-    color: #38bdf8;
-    box-shadow: 0 0.5rem 1.5rem rgba(56,189,248,0.6);
+    color: #f87171;
 }
 
 /* ===== Skills & Projects ===== */
@@ -137,7 +138,7 @@ p {
     padding: 1.5rem 1rem;
     text-align: center;
     border-radius: 1rem;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1rem;
     color: #ffffff;
     transition: all 0.4s ease;
@@ -145,10 +146,10 @@ p {
 
 .skill-card:hover,
 .project-card:hover {
-    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    background: linear-gradient(135deg, #f87171, #ef4444, #dc2626);
     color: #000000;
-    transform: scale(1.05);
-    box-shadow: 0 0.5rem 1.5rem rgba(56, 189, 248, 0.5);
+    transform: translateY(-8px);
+    box-shadow: 0 0.8rem 1.8rem rgba(248,113,113,0.4);
 }
 
 /* ===== Contact Page ===== */
@@ -156,7 +157,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 5rem); /* adjust for nav height */
+    min-height: calc(100vh - 5rem);
     padding: 1rem;
 }
 
@@ -167,52 +168,31 @@ p {
     text-align: center;
 }
 
-.contact-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2.5rem;
-    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .contact-link {
     display: block;
     margin: 1rem 0;
     padding: 1rem 2rem;
     width: 18rem;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 600;
     border-radius: 0.8rem;
     background: #1e293b;
-    color: #38bdf8;
+    color: #f87171;
     transition: all 0.3s ease;
 }
 
 .contact-link:hover {
-    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    background: linear-gradient(135deg, #f87171, #ef4444);
     color: #000000;
-    transform: scale(1.05);
-    box-shadow: 0 0.5rem 1.5rem rgba(56,189,248,0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 0.8rem 1.8rem rgba(248,113,113,0.4);
 }
 
-/* ===== Animations ===== */
-@keyframes fadeUp {
-    0% { opacity: 0; transform: translateY(2rem); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(1rem); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* ===== Responsive (Mobile Friendly) ===== */
+/* ===== Responsive ===== */
 @media (max-width: 480px) {
     h1 { font-size: 2rem; }
     p { font-size: 1rem; }
-    nav a { font-size: 0.95rem; margin: 0 0.8rem; }
-    .contact-container h1 { font-size: 2rem; }
-    .contact-link { width: 90%; font-size: 1rem; padding: 0.9rem 1rem; }
+    nav a { font-size: 0.9rem; margin: 0 0.7rem; }
+    .contact-link { width: 90%; }
     .resume-box { padding: 1.5rem 2rem; }
-    .skill-card, .project-card { padding: 1rem; font-size: 0.95rem; }
 }
