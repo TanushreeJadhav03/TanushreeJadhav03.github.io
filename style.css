@@ -73,35 +73,16 @@ p {
     animation: fadeUp 1s ease forwards;
 }
 
-/* ===== About Container (Centers Resume Box & Text) ===== */
+/* ===== About Container ===== */
 .about-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* top aligned */
+    justify-content: flex-start;
     max-width: 800px;
     margin: 0 auto;
     padding: 50px 20px;
     text-align: center;
-}
-
-/* ===== Buttons ===== */
-.btn {
-    background: #38bdf8;
-    color: black;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    display: inline-block;
-    margin-top: 25px;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background: #ffffff;
-    color: #0f172a;
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.5);
 }
 
 /* ===== Resume Box ===== */
@@ -174,28 +155,43 @@ p {
     box-shadow: 0 10px 25px rgba(56, 189, 248, 0.5);
 }
 
-/* ===== Contact Links ===== */
+/* ===== Contact Page ===== */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .contact-link {
     display: block;
-    margin: 10px 0;
-    padding: 12px 25px;
-    background: #1e293b;
-    border-radius: 10px;
-    color: #38bdf8;
+    margin: 15px 0;
+    padding: 15px 30px;
+    width: 250px;
     font-size: 18px;
     font-weight: bold;
-    width: 250px;
+    border-radius: 12px;
+    background: #1e293b;
+    color: #38bdf8;
     transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeUp 0.8s forwards;
 }
 
 .contact-link:hover {
     background: linear-gradient(135deg, #38bdf8, #0ea5e9);
     color: #000000;
-    transform: scale(1.05) translateY(-3px);
-    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.5);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(56,189,248,0.5);
 }
 
 /* ===== Animations ===== */
@@ -213,6 +209,7 @@ p {
 @media (max-width: 768px) {
     h1 { font-size: 2rem; }
     .skill-card, .project-card { padding: 20px 15px; font-size: 1rem; }
+    .contact-container h1 { font-size: 2rem; margin-bottom: 30px; }
     .contact-link { width: 200px; font-size: 16px; }
     p { font-size: 15px; padding: 0 10px; }
 }
